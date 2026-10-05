@@ -1,0 +1,238 @@
+:root {
+    --steel-950: #10151b;
+    --steel-900: #171e26;
+    --steel-800: #202a34;
+    --steel-700: #2c3947;
+    --chrome: #9fb0bf;
+    --chrome-lt: #ccd6de;
+    --paper: #edf1f4;
+    --autobot-blue: #2f6fb0;
+    --autobot-blue-lt: #5b9bdc;
+    --autobot-red: #c0272f;
+    --hazard: #e8a33d;
+    --line: rgba(159, 176, 191, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--steel-950);
+    background-image:
+        radial-gradient(ellipse 900px 500px at 50% -10%, rgba(47, 111, 176, 0.25), transparent 60%);
+    color: var(--paper);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+
+.hazard-strip {
+    height: 10px;
+    width: 100%;
+    background: repeating-linear-gradient(135deg,
+            var(--hazard) 0 18px,
+            var(--steel-950) 18px 36px);
+}
+
+h1,
+h2 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+
+.hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.eyebrow {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.35em;
+    color: var(--autobot-blue-lt);
+    margin: 0 0 0.75rem;
+}
+
+#title {
+    font-size: clamp(2.6rem, 7vw, 4.4rem);
+    font-weight: 700;
+    color: var(--paper);
+    text-shadow: 0 0 28px rgba(91, 155, 220, 0.35);
+}
+
+.dates {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    color: var(--chrome);
+    margin: 0.9rem 0 0;
+}
+
+.hero-sub {
+    margin: 1.4rem 0 0;
+    font-size: 1.15rem;
+    color: var(--chrome-lt);
+    font-style: italic;
+    border-top: 1px solid var(--line);
+    padding-top: 1.2rem;
+    display: inline-block;
+}
+
+
+#img-div {
+    max-width: 480px;
+    margin: 0 auto 3.5rem;
+    padding: 0.6rem;
+    background: linear-gradient(160deg, var(--autobot-blue) 0%, var(--steel-800) 55%, var(--autobot-red) 100%);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: 3px solid var(--steel-950);
+}
+
+#img-caption {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    color: var(--chrome-lt);
+    padding: 0.85rem 0.6rem 0.3rem;
+}
+
+
+#tribute-info {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.plate {
+    position: relative;
+    background: var(--steel-900);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--autobot-blue);
+    border-radius: 4px;
+    padding: 1.8rem 2rem;
+}
+
+.plate h2 {
+    font-size: 1.5rem;
+    color: var(--paper);
+    margin-bottom: 0.75rem;
+}
+
+.plate p {
+    color: var(--chrome-lt);
+    margin: 0;
+}
+
+.timeline {
+    border-left-color: var(--autobot-red);
+}
+
+.timeline ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.timeline li {
+    color: var(--chrome-lt);
+    padding-left: 0.2rem;
+}
+
+.yr {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    color: var(--hazard);
+    margin-right: 0.7rem;
+    min-width: 3.5rem;
+    display: inline-block;
+}
+
+.quote-plate {
+    border-left-color: var(--hazard);
+    background: linear-gradient(180deg, var(--steel-900), var(--steel-800));
+}
+
+.closing {
+    font-size: 1.08rem;
+    font-style: italic;
+    color: var(--paper);
+}
+
+
+.link-wrap {
+    text-align: center;
+    margin: 3.5rem auto 4.5rem;
+}
+
+#tribute-link {
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--steel-950);
+    background: var(--autobot-blue-lt);
+    padding: 0.85rem 1.9rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#tribute-link:hover,
+#tribute-link:focus-visible {
+    background: var(--hazard);
+    transform: translateY(-2px);
+}
+
+#tribute-link:focus-visible {
+    outline: 3px solid var(--paper);
+    outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+    .hero {
+        padding: 3rem 1.2rem 2rem;
+    }
+
+    .plate {
+        padding: 1.4rem 1.3rem;
+    }
+
+    #img-div {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    #tribute-link {
+        transition: none;
+    }
+}
